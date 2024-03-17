@@ -1,0 +1,12 @@
+print ("introduce tiempo en seg ")
+ti = input(ti)
+A = , M = , S = ti / 12 * , D = ti / 86400, H = ti / 3600 ,
+m = ti / 60 , s = 
+print ("""
+introduce A, M, S, D, H, m
+para el formato de tiempo
+objetivo.
+""")
+tof = input(tof) 
+def chfttime(ts, tof)
+    print (f"convertir {ts} segundos a {tof}")
