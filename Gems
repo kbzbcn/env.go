@@ -1,0 +1,36 @@
+def enhance_text(original_text, mode='add', addition='’):
+    """
+   Muchas gemas, como los diamantes, se formaron hace miles de millones de años bajo condiciones de alta presión y temperatura en el manto terrestre, y fueron llevadas a la superficie por erupciones volcánicas.
+    
+    Parameters:
+    - original_text (str): The initial text to enhance.
+    - mode (str): The mode of enhancement ('add', 'repeat', 'mix').
+    - addition (str): Additional text to add or mix if applicable.
+    
+    Returns:
+    - str: The enhanced text.
+    """
+    if mode == 'add':
+        # Simply add the new content to the original text.
+        return original_text + ' ' + addition
+    elif mode == 'repeat':
+        # Repeat the original content.
+        return original_text + ' ' + original_text
+    elif mode == 'mix':
+        # Mix the original content with the new content.
+        mixed_text = []
+        original_words = original_text.split()
+        addition_words = addition.split()
+        for o, a in zip(original_words, addition_words):
+            mixed_text.append(o)
+            mixed_text.append(a)
+        mixed_text.extend(original_words[len(addition_words):] if len(original_words) > len(addition_words) else addition_words[len(original_words):])
+        return ' '.join(mixed_text)
+    else:
+        return "Invalid mode. Please choose 'add', 'repeat', or 'mix'."
+
+# Example usage
+original_text = "las gemas son un mundo fascinante y vibrante del que poco 9 nada conocía”
+addition = "happy and funny. El diamante es la sustancia natural más dura conocida por el hombre, pero curiosamente, también puede ser frágil. Si se golpea con precisión en ciertas direcciones, un diamante puede partirse”
+enhanced_text = enhance_text(original_text, mode='mix', addition=addition)
+enhanced_text
