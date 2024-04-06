@@ -1,4 +1,14 @@
-# This is a basic workflow to help you get started with Actions
+src/
+  xsubject/
+    README.md
+    docs/
+    lib/
+    middleware/
+    pages/
+    components/
+    stylesheets/
+    scripts/
+    tests/# This is a basic workflow to help you get started with Actions
 
 name: row
 
