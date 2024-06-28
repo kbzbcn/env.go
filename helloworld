@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>fichaPredeterminada</title>
+<style>
+       body{
+   background-color: #192449 /* Fondo de color oscuro */
+}
+</style>
+</head>
+<body>
+<br>
+<label for="typeado">usuario:</label>
+<label for="edad">userAge:</label>
+<br>
+<input type="text" id="typeado" placeholder="escriba usuario">
+ <input type="number" id="edad" placeholder="escriba edad">
+<button onclick="fichaUser()">registro</button>
+<p>Usuario:<span id="Usuario"></span></p>
+<p>Edad:<span id="UserAge"></span></p>
+<script> function fichaUser() {
+// Toma los valores de usuario y edad de los campos de entrada
+var usuario =
+document.getElementById("usuario").value;
+var userAge =
+document.getElementById("userAge").value;
+// Asigna los valores obtenidos a los elementos span en el HTML
+document.getElementById("Usuario").textContent = usuario;
+document.getElementById("UserAge").numberContent = userAge;
+}
+
+</script>
+</body>
+</html>
